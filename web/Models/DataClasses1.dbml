@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="黑龙江省农村精神文明调查问卷" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=LITINGTING-PC\MSSQLSERVER1;Initial Catalog=黑龙江省农村精神文明调查问卷;Integrated Security=True;Persist Security Info=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="黑龙江省农村精神文明调查问卷ConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AnsLog" Member="AnsLog">
+    <Type Name="AnsLog">
+      <Column Name="AnsLogId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="shi" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="xian" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="zhen" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="cun" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Ans" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="Ip" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.diqu_quXian" Member="diqu_quXian">
+    <Type Name="diqu_quXian">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="chengShi_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Association Name="diqu_chengShi_diqu_quXian" Member="diqu_chengShi" ThisKey="chengShi_id" OtherKey="id" Type="diqu_chengShi" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.diqu_chengShi" Member="diqu_chengShi">
+    <Type Name="diqu_chengShi">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="diqu_chengShi_diqu_quXian" Member="diqu_quXian" ThisKey="id" OtherKey="chengShi_id" Type="diqu_quXian" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AnsLog_2015" Member="AnsLog_2015">
+    <Type Name="AnsLog_2015">
+      <Column Name="AnsLogId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="shi" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="xian" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="zhen" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="cun" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="zhiwu" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Ans" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="jianyi" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="Ip" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

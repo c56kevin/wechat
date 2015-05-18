@@ -1,0 +1,16 @@
+body { font-family:"Microsoft Yahei"; background: url(../images/bg.jpg) no-repeat center top;}
+.main { width:980px; height:auto; margin:0 auto;}
+
+.header {width:980px; height:685px; float:left; background:url(../images/header.jpg) no-repeat;}
+.con {width:980px; height:3055px; float:left;}
+.con-from {width:980px; height:auto;}
+.con-from input {width:160px; height:30px; line-height:30px; float: left;}
+.con-from select {width:110px; height:30px; line-height:30px; float: left;}
+
+.con-li {width:980px; height:auto; margin-top:20px;}
+.con-li ul {vertical-align:middle;}
+.con-li ul li {width:980px; height:auto; float:left; margin-top:15px;}
+
+.con-btn {width:141px; height:84px; margin:0 auto;}
+
+.footer {width:980px; height:226px; float:left; background:url(../images/footer.jpg) no-repeat;}
